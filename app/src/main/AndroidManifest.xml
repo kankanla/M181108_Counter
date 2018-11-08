@@ -16,7 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CounterMain"></activity>
+        <activity android:name=".CounterMain" />
+        <activity android:name=".CounterMain2" />
+
+        <service
+            android:name=".CounterService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>
