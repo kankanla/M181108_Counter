@@ -6,9 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Binder;
-import android.os.Build;
 import android.os.IBinder;
-import android.support.annotation.RequiresApi;
 import android.util.Log;
 
 public class CounterService extends Service {
@@ -29,7 +27,6 @@ public class CounterService extends Service {
         sharedPreferences = getSharedPreferences("Counter", MODE_PRIVATE);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.O)
     public void ServieDome() {
         Log.d(TAG, "ServieDome");
     }

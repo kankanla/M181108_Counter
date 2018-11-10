@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">M181108_Counter</string>
+
+    <string name="TOUCH_BOTTON_ON">TOUCH_BOTTON_ON</string>
+    <string name="TOUCH_BOTTON_OFF">TOUCH_BOTTON_OFF</string>
+    <string name="TOUCH_BOTTON_SET">TOUCH_BOTTON_ON/OFF</string>
+    <string name="TOUCH_BOTTON_TOAST_ON">TOUCH_ON</string>
+    <string name="TOUCH_BOTTON_TOAST_OFF">TOUCH_OFF</string>
+    <string name="TOUCH_SOUND_ON">TOUCH_SOUND_ON</string>
+    <string name="TOUCH_SOUND_OFF">TOUCH_SOUND_OFF</string>
+    <string name="TOUCH_SOUND_SET">TOUCH_SOUND_ON/OFF</string>
+    <string name="COUNTER3_MODE_SET">COUNTER3_MODE_SET</string>
+    <string name="COUNTER3_MODE_1">COUNTER3_MODE_1</string>
+    <string name="COUNTER3_MODE_2">COUNTER3_MODE_2</string>
+    <string name="COUNTER3_MODE_3">COUNTER3_MODE_3</string>
+    <string name="COUNTER1_CLEAR">COUNTER1_CLEAR</string>
+    <string name="COUNTER2_CLEAR">COUNTER2_CLEAR</string>
+    <string name="COUNTER3_CLEAR">COUNTER3_CLEAR</string>
+    <string name="COUNTER4_CLEAR">COUNTER4_CLEAR</string>
+    <string name="COUNTER_CLEAR">COUNTER_CLEAR</string>
+
+    <string name="interstitial_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="admob_1">ca-app-pub-0547405774182700/6592893622</string>
+    <string name="admob_2">ca-app-pub-0547405774182700/6592893622</string>
+    <string name="admob_3">ca-app-pub-0547405774182700/6592893622</string>
+    <string name="admob_app_id">ca-app-pub-0547405774182700~8772334403</string>
+    <string name="addTestDeviceH">53185CF5BFA5B2121DF7FA86E7064C22</string>
+    <string name="addTestDeviceASUS">7026FA2EC1DC7E60FBEA02C64D33BD8B</string>
+    <string name="addTestDeviceMI">86AEBAEA97BDD84167E1B21ED9490D8B</string>
+
 </resources>
