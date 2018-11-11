@@ -34,6 +34,8 @@ public class CounterMain extends AppCompatActivity implements View.OnClickListen
     private final String TAG = "### CounterMain ###";
     private Button button1, button2, button3, button4;
     private SharedPreferences sharedPreferences;
+    private SharedPreferences.Editor editor;
+    private SoundPool soundPool;
     private final String Shared_FILE_NAME = "Counter";
     private final String Shared_counter1 = "counter1";
     private final String Shared_counter2 = "counter2";
@@ -43,8 +45,6 @@ public class CounterMain extends AppCompatActivity implements View.OnClickListen
     private String Shared_SOUND = "SCREED_SOND";
     private boolean BUTTON_TOUCH_TRUE = true;
     private boolean BUTTON_TOUCH_FALSE = false;
-    private SharedPreferences.Editor editor;
-    private SoundPool soundPool;
     private final int SCREEN_TOUCH_ON = 0;
     private final int SCREEN_TOUCH_OFF = 1;
     private final int TOUCH_SOUND_ON = 0;
@@ -81,6 +81,7 @@ public class CounterMain extends AppCompatActivity implements View.OnClickListen
     }
 
     public void setAPP() {
+        Log.d(TAG, "setAPP");
         if (sharedPreferences.getInt(Shared_SCREED, SCREEN_TOUCH_ON) != SCREEN_TOUCH_ON) {
             button1.setEnabled(this.BUTTON_TOUCH_FALSE);
             button2.setEnabled(this.BUTTON_TOUCH_FALSE);
@@ -88,12 +89,14 @@ public class CounterMain extends AppCompatActivity implements View.OnClickListen
     }
 
     private void setsharedPreferences() {
+        Log.d(TAG, "setsharedPreferences");
         sharedPreferences = getSharedPreferences(Shared_FILE_NAME, MODE_PRIVATE);
         editor = sharedPreferences.edit();
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        Log.d(TAG, "onCreateOptionsMenu");
         menu.add(1, 13, 1, R.string.COUNTER3_MODE_SET);
         menu.add(1, 11, 1, R.string.TOUCH_BOTTON_SET);
         menu.add(1, 12, 1, R.string.TOUCH_SOUND_SET);
@@ -108,6 +111,7 @@ public class CounterMain extends AppCompatActivity implements View.OnClickListen
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        Log.d(TAG, "onOptionsItemSelected");
         switch (item.getItemId()) {
             case 11:
                 if (SCREEN_TOUCH_OFF != sharedPreferences.getInt(Shared_SCREED, SCREEN_TOUCH_ON)) {
@@ -125,8 +129,10 @@ public class CounterMain extends AppCompatActivity implements View.OnClickListen
             case 12:
                 if (TOUCH_SOUND_OFF != sharedPreferences.getInt(Shared_SOUND, TOUCH_SOUND_ON)) {
                     editor.putInt(Shared_SOUND, this.TOUCH_SOUND_OFF).apply();
+                    Toast.makeText(this, getString(R.string.TOUCH_SOUND_OFF), Toast.LENGTH_SHORT).show();
                 } else {
                     editor.putInt(Shared_SOUND, this.TOUCH_SOUND_ON).apply();
+                    Toast.makeText(this, getString(R.string.TOUCH_SOUND_ON), Toast.LENGTH_SHORT).show();
                 }
                 break;
             case 13:
@@ -136,33 +142,43 @@ public class CounterMain extends AppCompatActivity implements View.OnClickListen
                 } else {
                     editor.putInt(BT3_MODE, 0).apply();
                 }
+
+                switch (temp) {
+                    case 0:
+                        Toast.makeText(this, getString(R.string.COUNTER1) + " - " + getString(R.string.COUNTER2), Toast.LENGTH_SHORT).show();
+                        break;
+                    case 1:
+                        Toast.makeText(this, getString(R.string.COUNTER1) + " + " + getString(R.string.COUNTER2), Toast.LENGTH_SHORT).show();
+                        break;
+                    case 2:
+                        Toast.makeText(this, getString(R.string.COUNTER3), Toast.LENGTH_SHORT).show();
+                        break;
+                }
                 showButtonText();
                 break;
             case 14:
-                soundPool.play(cl, 0.5f, 0.5f, 0, 0, 1);
                 Toast.makeText(this, getString(R.string.COUNTER_CLEAR), Toast.LENGTH_SHORT).show();
                 editor.putInt(Shared_counter1, 0).apply();
                 showButtonText();
                 break;
             case 15:
-                soundPool.play(cl, 0.5f, 0.5f, 0, 0, 1);
                 Toast.makeText(this, getString(R.string.COUNTER_CLEAR), Toast.LENGTH_SHORT).show();
                 editor.putInt(Shared_counter2, 0).apply();
                 showButtonText();
                 break;
             case 16:
-                soundPool.play(cl, 0.5f, 0.5f, 0, 0, 1);
                 Toast.makeText(this, getString(R.string.COUNTER_CLEAR), Toast.LENGTH_SHORT).show();
                 editor.putInt(Shared_counter3, 0).apply();
                 showButtonText();
                 break;
             case 17:
-                soundPool.play(cl, 0.5f, 0.5f, 0, 0, 1);
                 Toast.makeText(this, getString(R.string.COUNTER_CLEAR), Toast.LENGTH_SHORT).show();
                 editor.putInt(Shared_counter4, 0).apply();
                 showButtonText();
                 break;
         }
+        soundPool.play(cl, 0.5f, 0.5f, 0, 0, 1);
+        soundPool.play(e, 0.5f, 0.5f, 0, 0, 1);
         return super.onOptionsItemSelected(item);
     }
 
@@ -186,11 +202,10 @@ public class CounterMain extends AppCompatActivity implements View.OnClickListen
                 button3.setText(String.valueOf(sharedPreferences.getInt(Shared_counter1, 0) + sharedPreferences.getInt(Shared_counter2, 0)));
                 break;
         }
-
-
     }
 
     private void setSoundPool() throws IOException {
+        Log.d(TAG, "setSoundPool");
         AssetManager assetManager = getAssets();
         AudioAttributes audioAttributes = null;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -211,7 +226,6 @@ public class CounterMain extends AppCompatActivity implements View.OnClickListen
         e = soundPool.load(assetManager.openFd("E.mp3"), 0);
         f = soundPool.load(assetManager.openFd("F.mp3"), 0);
         cl = soundPool.load(assetManager.openFd("F.mp3"), 0);
-
 
         soundPool.setOnLoadCompleteListener(new SoundPool.OnLoadCompleteListener() {
             @Override
@@ -305,6 +319,14 @@ public class CounterMain extends AppCompatActivity implements View.OnClickListen
     protected void onPause() {
         Log.d(TAG, "onPause");
         super.onPause();
+        soundPool.play(f, 1.0f, 1.0f, 1, 0, 1);
+        soundPool.play(e, 1.0f, 1.0f, 1, 0, 1);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d(TAG, "onStop");
     }
 
     @Override
@@ -329,6 +351,11 @@ public class CounterMain extends AppCompatActivity implements View.OnClickListen
     @Override
     public boolean onKeyUp(int keyCode, KeyEvent event) {
         Log.d(TAG, "onKeyUp");
+        if (button1.isEnabled() && button2.isEnabled()) {
+            button1.setEnabled(this.BUTTON_TOUCH_FALSE);
+            button2.setEnabled(this.BUTTON_TOUCH_FALSE);
+            editor.putInt("SCREED_TOUCH", SCREEN_TOUCH_OFF).apply();
+        }
         if (event.getKeyCode() == KeyEvent.KEYCODE_VOLUME_UP) {
             Count("counter1", button1);
             showButtonText();
@@ -348,21 +375,25 @@ public class CounterMain extends AppCompatActivity implements View.OnClickListen
         switch (v.getId()) {
             case R.id.count1:
                 Count("counter1", button1);
+                showButtonText();
                 break;
             case R.id.count2:
                 Count("counter2", button2);
+                showButtonText();
                 break;
             case R.id.count3:
                 Count("counter3", button3);
+                showButtonText();
                 break;
             case R.id.count4:
                 Count("counter4", button4);
+                showButtonText();
                 break;
         }
-        showButtonText();
     }
 
     protected void GoogleAdmob() {
+        Log.d(TAG, "GoogleAdmob");
         MobileAds.initialize(this, getString(R.string.admob_app_id));
         AdView adView = new AdView(this);
         adView.setBackgroundColor(ContextCompat.getColor(this, android.R.color.black));
@@ -383,5 +414,4 @@ public class CounterMain extends AppCompatActivity implements View.OnClickListen
         RelativeLayout layout = findViewById(R.id.rel_admob);
         layout.addView(adView, -1, layoutParams);
     }
-
 }

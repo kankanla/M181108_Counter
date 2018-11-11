@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="TOUCH_BOTTON_ON">タッチ機能をロック</string>
+    <string name="TOUCH_BOTTON_OFF">タッチ機能をアンロック</string>
+    <string name="TOUCH_BOTTON_SET">タッチ機能のロック/アンロック</string>
+    <string name="TOUCH_BOTTON_TOAST_ON">タッチ有効に設定しました</string>
+    <string name="TOUCH_BOTTON_TOAST_OFF">タッチ無効に設定しました</string>
+    <string name="app_name">4カウンター</string>
+    <string name="TOUCH_SOUND_ON">カウンター音オン</string>
+    <string name="TOUCH_SOUND_OFF">カウンター音オフ</string>
+    <string name="TOUCH_SOUND_SET">タッチ効果音の有効/無効</string>
+    <string name="COUNTER3_MODE_SET">3 カウンターモードの変更</string>
+    <string name="COUNTER1_CLEAR">1 カウンタークリア</string>
+    <string name="COUNTER2_CLEAR">2 カウンタークリア</string>
+    <string name="COUNTER3_CLEAR">3 カウンタークリア</string>
+    <string name="COUNTER4_CLEAR">4 カウンタークリア</string>
+    <string name="COUNTER_CLEAR" >クリアしました</string>
+    <string name="COUNTER1">カウンター 1</string>
+    <string name="COUNTER2">カウンター 2</string>
+    <string name="COUNTER3">カウンター 3</string>
+    <string name="COUNTER4">カウンター 4</string>
+</resources>

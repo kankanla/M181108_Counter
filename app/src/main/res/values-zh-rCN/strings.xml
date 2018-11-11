@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">4通道计数器</string>
+    <string name="TOUCH_BOTTON_OFF">触屏按键无效</string>
+    <string name="TOUCH_BOTTON_SET">触屏按键的 有效/无效</string>
+    <string name="TOUCH_BOTTON_TOAST_ON">按键设定为有效</string>
+    <string name="TOUCH_BOTTON_TOAST_OFF">按键设定为无效</string>
+    <string name="TOUCH_SOUND_ON">打开效果音</string>
+    <string name="TOUCH_SOUND_OFF">关闭效果音</string>
+    <string name="TOUCH_SOUND_SET">触屏效果音 有效/无效</string>
+    <string name="COUNTER3_MODE_SET">第 3 计数器的模式变更</string>
+    <string name="COUNTER2_CLEAR">第 2 计时器清零</string>
+    <string name="COUNTER3_CLEAR">第 3 计时器清零</string>
+    <string name="COUNTER4_CLEAR">第 4 计时器清零</string>
+    <string name="COUNTER_CLEAR">计时器清零</string>
+    <string name="COUNTER1_CLEAR">第 1 计时器清零</string>
+    <string name="COUNTER1">第 1 计时器</string>
+    <string name="COUNTER2">第 2 计时器</string>
+    <string name="COUNTER3">第 3 计时器</string>
+    <string name="COUNTER4">第 4 计时器</string>
+    <string name="TOUCH_BOTTON_ON">触屏按键有效</string>
+</resources>

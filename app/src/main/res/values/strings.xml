@@ -10,22 +10,25 @@
     <string name="TOUCH_SOUND_OFF">TOUCH_SOUND_OFF</string>
     <string name="TOUCH_SOUND_SET">TOUCH_SOUND_ON/OFF</string>
     <string name="COUNTER3_MODE_SET">COUNTER3_MODE_SET</string>
-    <string name="COUNTER3_MODE_1">COUNTER3_MODE_1</string>
-    <string name="COUNTER3_MODE_2">COUNTER3_MODE_2</string>
-    <string name="COUNTER3_MODE_3">COUNTER3_MODE_3</string>
+    <string name="COUNTER3_MODE_1" translatable="false">COUNTER3_MODE_1</string>
+    <string name="COUNTER3_MODE_2" translatable="false">COUNTER3_MODE_2</string>
+    <string name="COUNTER3_MODE_3" translatable="false">COUNTER3_MODE_3</string>
+    <string name="COUNTER1">COUNTER1</string>
+    <string name="COUNTER2">COUNTER2</string>
+    <string name="COUNTER3">COUNTER3</string>
+    <string name="COUNTER4">COUNTER4</string>
     <string name="COUNTER1_CLEAR">COUNTER1_CLEAR</string>
     <string name="COUNTER2_CLEAR">COUNTER2_CLEAR</string>
     <string name="COUNTER3_CLEAR">COUNTER3_CLEAR</string>
     <string name="COUNTER4_CLEAR">COUNTER4_CLEAR</string>
     <string name="COUNTER_CLEAR">COUNTER_CLEAR</string>
 
-    <string name="interstitial_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>
-    <string name="admob_1">ca-app-pub-0547405774182700/6592893622</string>
-    <string name="admob_2">ca-app-pub-0547405774182700/6592893622</string>
-    <string name="admob_3">ca-app-pub-0547405774182700/6592893622</string>
-    <string name="admob_app_id">ca-app-pub-0547405774182700~8772334403</string>
-    <string name="addTestDeviceH">53185CF5BFA5B2121DF7FA86E7064C22</string>
-    <string name="addTestDeviceASUS">7026FA2EC1DC7E60FBEA02C64D33BD8B</string>
-    <string name="addTestDeviceMI">86AEBAEA97BDD84167E1B21ED9490D8B</string>
+    <string name="admob_1" translatable="false">ca-app-pub-0547405774182700/6592893622</string>
+    <string name="admob_2" translatable="false">ca-app-pub-0547405774182700/6592893622</string>
+    <string name="admob_3" translatable="false">ca-app-pub-0547405774182700/6592893622</string>
+    <string name="admob_app_id" translatable="false">ca-app-pub-0547405774182700~8772334403</string>
+    <string name="addTestDeviceH" translatable="false">53185CF5BFA5B2121DF7FA86E7064C22</string>
+    <string name="addTestDeviceASUS" translatable="false">7026FA2EC1DC7E60FBEA02C64D33BD8B</string>
+    <string name="addTestDeviceMI" translatable="false">86AEBAEA97BDD84167E1B21ED9490D8B</string>
 
 </resources>

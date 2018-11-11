@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">4Counter</string>
+    <string name="TOUCH_BOTTON_ON">Touch button ON</string>
+    <string name="TOUCH_BOTTON_OFF">Touch button OFF</string>
+    <string name="TOUCH_BOTTON_SET">Touch button setting</string>
+    <string name="TOUCH_BOTTON_TOAST_ON">Touch button ON</string>
+    <string name="TOUCH_BOTTON_TOAST_OFF">Touch button OFF</string>
+    <string name="TOUCH_SOUND_ON">Counter tone ON</string>
+    <string name="TOUCH_SOUND_OFF">Counter tone OFF</string>
+    <string name="TOUCH_SOUND_SET">Counter tone setting</string>
+    <string name="COUNTER3_MODE_SET">Change of 3counter mode</string>
+    <string name="COUNTER1_CLEAR">1 Counter Clear</string>
+    <string name="COUNTER2_CLEAR">2 Counter Clear</string>
+    <string name="COUNTER3_CLEAR">3 Counter Clear</string>
+    <string name="COUNTER4_CLEAR">4 Counter Clear</string>
+    <string name="COUNTER_CLEAR">Cleared</string>
+    <string name="COUNTER1">Counter 1</string>
+    <string name="COUNTER2">Counter 2</string>
+    <string name="COUNTER3">Counter 3</string>
+    <string name="COUNTER4">Counter 4</string>
+</resources>
