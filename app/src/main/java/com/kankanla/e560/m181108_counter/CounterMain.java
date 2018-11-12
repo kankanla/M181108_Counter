@@ -13,6 +13,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Html;
 import android.text.util.Linkify;
 import android.util.Log;
 import android.view.Display;
@@ -34,6 +35,7 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 
 import java.io.IOException;
+import java.util.regex.Pattern;
 
 
 public class CounterMain extends AppCompatActivity implements View.OnClickListener {
@@ -417,7 +419,10 @@ public class CounterMain extends AppCompatActivity implements View.OnClickListen
             super.onCreate(savedInstanceState);
             LinearLayout li = (LinearLayout) LayoutInflater.from(context).inflate(R.layout.about_layout, null);
             TextView textView = li.findViewById(R.id.textView3);
-            Linkify.addLinks(textView, Linkify.WEB_URLS);
+            textView.setText(Html.fromHtml("<u>" + getString(R.string.GooglePlayStore) + "<u>"));
+            Pattern pattern = Pattern.compile("");
+            String url = getString(R.string.PlayURL);
+            Linkify.addLinks(textView, pattern, url, null, null);
             setContentView(li);
         }
     }

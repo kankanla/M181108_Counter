@@ -27,6 +27,7 @@
     <string name="About_title2">About_title2</string>
     <string name="kankanla">Kankanla Software</string>
     <string name="PlayURL" translatable="false">https://play.google.com/store/apps/developer?id=kankanla</string>
+    <string name="GooglePlayStore" translatable="false">Google Play Store</string>
 
     <string name="admob_1" translatable="false">ca-app-pub-0547405774182700/6592893622</string>
     <string name="admob_2" translatable="false">ca-app-pub-0547405774182700/6592893622</string>
