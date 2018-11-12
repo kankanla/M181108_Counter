@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">4Counter</string>
+    <string name="app_name">4ch Counter</string>
     <string name="TOUCH_BOTTON_ON">Touch button ON</string>
     <string name="TOUCH_BOTTON_OFF">Touch button OFF</string>
     <string name="TOUCH_BOTTON_SET">Touch button setting</string>
@@ -19,4 +19,8 @@
     <string name="COUNTER2">Counter 2</string>
     <string name="COUNTER3">Counter 3</string>
     <string name="COUNTER4">Counter 4</string>
+    <string name="About">About</string>
+    <string name="kankanla">Kankanla Software</string>
+    <string name="About_title2">About_title2</string>
+    <string name="About_title1">About_title1</string>
 </resources>

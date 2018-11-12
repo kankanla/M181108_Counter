@@ -22,6 +22,11 @@
     <string name="COUNTER3_CLEAR">COUNTER3_CLEAR</string>
     <string name="COUNTER4_CLEAR">COUNTER4_CLEAR</string>
     <string name="COUNTER_CLEAR">COUNTER_CLEAR</string>
+    <string name="About">About</string>
+    <string name="About_title1">About_title1</string>
+    <string name="About_title2">About_title2</string>
+    <string name="kankanla">Kankanla Software</string>
+    <string name="PlayURL" translatable="false">https://play.google.com/store/apps/developer?id=kankanla</string>
 
     <string name="admob_1" translatable="false">ca-app-pub-0547405774182700/6592893622</string>
     <string name="admob_2" translatable="false">ca-app-pub-0547405774182700/6592893622</string>

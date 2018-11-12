@@ -5,7 +5,7 @@
     <string name="TOUCH_BOTTON_SET">タッチ機能のロック/アンロック</string>
     <string name="TOUCH_BOTTON_TOAST_ON">タッチ有効に設定しました</string>
     <string name="TOUCH_BOTTON_TOAST_OFF">タッチ無効に設定しました</string>
-    <string name="app_name">4カウンター</string>
+    <string name="app_name">4ch カウンター</string>
     <string name="TOUCH_SOUND_ON">カウンター音オン</string>
     <string name="TOUCH_SOUND_OFF">カウンター音オフ</string>
     <string name="TOUCH_SOUND_SET">タッチ効果音の有効/無効</string>
@@ -19,4 +19,8 @@
     <string name="COUNTER2">カウンター 2</string>
     <string name="COUNTER3">カウンター 3</string>
     <string name="COUNTER4">カウンター 4</string>
+    <string name="About">アプリについて</string>
+    <string name="kankanla">Kankanla Software</string>
+    <string name="About_title2">About_title2</string>
+    <string name="About_title1">About_title1</string>
 </resources>

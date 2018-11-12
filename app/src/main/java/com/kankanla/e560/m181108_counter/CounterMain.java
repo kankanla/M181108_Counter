@@ -1,5 +1,7 @@
 package com.kankanla.e560.m181108_counter;
 
+import android.app.AlertDialog;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.content.res.AssetManager;
@@ -11,15 +13,19 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.text.util.Linkify;
 import android.util.Log;
 import android.view.Display;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
@@ -105,6 +111,7 @@ public class CounterMain extends AppCompatActivity implements View.OnClickListen
         menu.add(2, 15, 2, R.string.COUNTER2_CLEAR);
         menu.add(2, 16, 2, R.string.COUNTER3_CLEAR);
         menu.add(2, 17, 2, R.string.COUNTER4_CLEAR);
+        menu.add(3, 18, 2, R.string.About);
 
         return super.onCreateOptionsMenu(menu);
     }
@@ -175,6 +182,11 @@ public class CounterMain extends AppCompatActivity implements View.OnClickListen
                 Toast.makeText(this, getString(R.string.COUNTER_CLEAR), Toast.LENGTH_SHORT).show();
                 editor.putInt(Shared_counter4, 0).apply();
                 showButtonText();
+                break;
+
+            case 18:
+                AboutDialog aboutDialog = new AboutDialog(this);
+                aboutDialog.show();
                 break;
         }
         soundPool.play(cl, 0.5f, 0.5f, 0, 0, 1);
@@ -391,6 +403,25 @@ public class CounterMain extends AppCompatActivity implements View.OnClickListen
                 break;
         }
     }
+
+    public class AboutDialog extends AlertDialog {
+        private Context context;
+
+        public AboutDialog(Context context) {
+            super(context);
+            this.context = context;
+        }
+
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            LinearLayout li = (LinearLayout) LayoutInflater.from(context).inflate(R.layout.about_layout, null);
+            TextView textView = li.findViewById(R.id.textView3);
+            Linkify.addLinks(textView, Linkify.WEB_URLS);
+            setContentView(li);
+        }
+    }
+
 
     protected void GoogleAdmob() {
         Log.d(TAG, "GoogleAdmob");

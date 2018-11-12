@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">4通道计数器</string>
+    <string name="app_name">4ch 计数器</string>
     <string name="TOUCH_BOTTON_OFF">触屏按键无效</string>
     <string name="TOUCH_BOTTON_SET">触屏按键的 有效/无效</string>
     <string name="TOUCH_BOTTON_TOAST_ON">按键设定为有效</string>
@@ -19,4 +19,8 @@
     <string name="COUNTER3">第 3 计时器</string>
     <string name="COUNTER4">第 4 计时器</string>
     <string name="TOUCH_BOTTON_ON">触屏按键有效</string>
+    <string name="About">关于软件</string>
+    <string name="kankanla">Kankanla Software</string>
+    <string name="About_title2">About_title2</string>
+    <string name="About_title1">About_title1</string>
 </resources>
